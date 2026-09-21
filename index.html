@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
 <meta charset="UTF-8">
-<title>Jira Filter 15370 – Issues</title>
+<title>Änderungsanträge Schulabsentismus Kt. SZ</title>
 <style>
   :root {
     --blue: #0052CC;
@@ -27,9 +27,22 @@
   .subtitle {
     color: var(--text-light);
     font-size: 13px;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
   }
   .subtitle a { color: var(--blue); }
+  .info-box {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--blue);
+    border-radius: 4px;
+    padding: 14px 18px;
+    margin-bottom: 24px;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  .info-box p { margin: 0 0 10px 0; }
+  .info-box p:last-child { margin-bottom: 0; }
+  .info-box strong { color: var(--text); }
   table {
     width: 100%;
     border-collapse: collapse;
@@ -72,14 +85,22 @@
     background: #DEEBFF;
     color: #0052CC;
   }
+  .status-todo { background: #DFE1E6; color: #42526E; }
+  .status-inprogress { background: #DEEBFF; color: #0052CC; }
+  .status-done { background: #E3FCEF; color: #006644; }
   .estimate { white-space: nowrap; }
   .empty { color: var(--text-light); font-style: italic; }
 </style>
 </head>
 <body>
 
-<h1>Jira Filter 15370 – Issues</h1>
+<h1>Änderungsanträge Schulabsentismus Kt. SZ</h1>
 <div class="subtitle">Quelle: <a href="https://7education.atlassian.net/issues/?filter=15370" target="_blank">7education.atlassian.net/issues/?filter=15370</a> · 4 Issues</div>
+
+<div class="info-box">
+  <p><strong>Grobschätzung:</strong><br>Die vorliegende Grobschätzung (Original Estimate) ist ein Grobschätzung des Produkteverantwortlichen. Sie kann von der Detailschätzung abweichen und dient lediglich dazu, den Aufwand grob abzuschätzen, damit man den relativen Aufwand des Änderungsantrages abschätzen kann und so eine ungefähre Vorstellung der Kosten kriegt.</p>
+  <p><strong>Detailschätzung:</strong><br>Die Detailschätzung wurde anhand der Visualisierung und den Details gemacht. Die Entwicklung wird hier in die Schätzung miteinbezogen. Diese stellt den effektiv benötigten Aufwand dar und wird sich auch in einer allfälligen Offerte widerspiegeln.</p>
+</div>
 
 <table>
   <thead>
@@ -99,7 +120,7 @@
       <td>test dani</td>
       <td><span class="empty">–</span></td>
       <td class="estimate"><span class="empty">–</span></td>
-      <td><span class="status">In Refinement</span></td>
+      <td><span class="status status-todo">In Refinement</span></td>
     </tr>
     <tr>
       <td class="key"><a href="https://7education.atlassian.net/browse/TECHWIZ-2142" target="_blank">TECHWIZ-2142</a></td>
@@ -107,7 +128,7 @@
       <td>Absenzen: Direktzugriff auf Absenzhistorie über das Widget "Absenzen meiner Lernenden"</td>
       <td>Im Widget "Absenzen meiner Lernenden" auf der Startseite können Lehrpersonen neu direkt auf den Namen einer Schülerin oder eines Schülers klicken. Sie gelangen dadurch direkt in die Absenzverwaltung, bereits gefiltert auf die betreffende Person und das aktuelle Semester. So lässt sich die gesamte Absenzhistorie einer Person ohne manuelles Suchen einsehen.</td>
       <td class="estimate">1d</td>
-      <td><span class="status">In Refinement</span></td>
+      <td><span class="status status-todo">In Refinement</span></td>
     </tr>
     <tr>
       <td class="key"><a href="https://7education.atlassian.net/browse/TECHWIZ-2141" target="_blank">TECHWIZ-2141</a></td>
@@ -115,7 +136,7 @@
       <td>Absenzen: Warnsymbol für Schulabsentismus im Widget "Absenzen meiner Lernenden"</td>
       <td>Im Widget "Absenzen meiner Lernenden" auf der Startseite wird bei Schülerinnen und Schülern, die den definierten Schwellenwert für Schulabsentismus erreichen, neu ein Warnsymbol angezeigt. Beim Bewegen der Maus über das Symbol erscheint der Hinweis "Schulabsentismuswarnung". So erkennen Lehrpersonen auf einen Blick, bei welchen Lernenden ein auffälliges Absenzmuster vorliegt.</td>
       <td class="estimate">1d</td>
-      <td><span class="status">In Refinement</span></td>
+      <td><span class="status status-todo">In Refinement</span></td>
     </tr>
     <tr>
       <td class="key"><a href="https://7education.atlassian.net/browse/TECHWIZ-2140" target="_blank">TECHWIZ-2140</a></td>
@@ -123,7 +144,7 @@
       <td>Absenzen: Schwellenwert für Schulabsentismus konfigurieren</td>
       <td>In der Absenzkonfiguration kann neu ein Schwellenwert für Schulabsentismus definiert werden: Zeitraum in Wochen, Anzahl unabhängiger Absenzen und die dafür relevanten Absenzgründe. Eine unabhängige Absenz ist dabei eine Absenz, die nicht an aufeinanderfolgenden Tagen liegt. Mit dieser Konfiguration lassen sich wiederkehrende Absenzmuster im Widget "Absenzen meiner Lernenden" einfacher erkennen.</td>
       <td class="estimate">1d</td>
-      <td><span class="status">In Refinement</span></td>
+      <td><span class="status status-todo">In Refinement</span></td>
     </tr>
   </tbody>
 </table>
