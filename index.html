@@ -90,64 +90,107 @@
   .status-done { background: #E3FCEF; color: #006644; }
   .estimate { white-space: nowrap; }
   .empty { color: var(--text-light); font-style: italic; }
+
+  #login-screen {
+    max-width: 360px;
+    margin: 15vh auto 0;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 28px 24px;
+    box-shadow: 0 1px 2px rgba(9,30,66,0.15);
+  }
+  #login-screen h2 {
+    margin: 0 0 16px 0;
+    font-size: 16px;
+  }
+  #login-screen input[type="password"] {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+  #login-screen button {
+    background: var(--blue);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 9px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    width: 100%;
+  }
+  #login-error {
+    color: #BF2600;
+    font-size: 13px;
+    margin-top: 10px;
+    display: none;
+  }
+  #content { display: none; }
 </style>
 </head>
 <body>
 
-<h1>Änderungsanträge Schulabsentismus Kt. SZ</h1>
-<div class="subtitle">Quelle: <a href="https://7education.atlassian.net/issues/?filter=15370" target="_blank">7education.atlassian.net/issues/?filter=15370</a> · 4 Issues</div>
-
-<div class="info-box">
-  <p><strong>Grobschätzung:</strong><br>Die vorliegende Grobschätzung (Original Estimate) ist ein Grobschätzung des Produkteverantwortlichen. Sie kann von der Detailschätzung abweichen und dient lediglich dazu, den Aufwand grob abzuschätzen, damit man den relativen Aufwand des Änderungsantrages abschätzen kann und so eine ungefähre Vorstellung der Kosten kriegt.</p>
-  <p><strong>Detailschätzung:</strong><br>Die Detailschätzung wurde anhand der Visualisierung und den Details gemacht. Die Entwicklung wird hier in die Schätzung miteinbezogen. Diese stellt den effektiv benötigten Aufwand dar und wird sich auch in einer allfälligen Offerte widerspiegeln.</p>
+<div id="login-screen">
+  <h2>Passwortgeschützter Bereich</h2>
+  <form id="login-form">
+    <input type="password" id="password-input" placeholder="Passwort" autocomplete="current-password" autofocus>
+    <button type="submit">Anzeigen</button>
+    <div id="login-error">Falsches Passwort.</div>
+  </form>
 </div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Key</th>
-      <th>Summary</th>
-      <th>Release Note Title</th>
-      <th>Release Note Description</th>
-      <th>Original Estimate</th>
-      <th>Status</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td class="key"><a href="https://7education.atlassian.net/browse/TECHWIZ-2178" target="_blank">TECHWIZ-2178</a></td>
-      <td>abs-widget: my absences - widget configuration</td>
-      <td>test dani</td>
-      <td><span class="empty">–</span></td>
-      <td class="estimate"><span class="empty">–</span></td>
-      <td><span class="status status-todo">In Refinement</span></td>
-    </tr>
-    <tr>
-      <td class="key"><a href="https://7education.atlassian.net/browse/TECHWIZ-2142" target="_blank">TECHWIZ-2142</a></td>
-      <td>abs-widget: click student name to open prefiltered absence administration</td>
-      <td>Absenzen: Direktzugriff auf Absenzhistorie über das Widget "Absenzen meiner Lernenden"</td>
-      <td>Im Widget "Absenzen meiner Lernenden" auf der Startseite können Lehrpersonen neu direkt auf den Namen einer Schülerin oder eines Schülers klicken. Sie gelangen dadurch direkt in die Absenzverwaltung, bereits gefiltert auf die betreffende Person und das aktuelle Semester. So lässt sich die gesamte Absenzhistorie einer Person ohne manuelles Suchen einsehen.</td>
-      <td class="estimate">1d</td>
-      <td><span class="status status-todo">In Refinement</span></td>
-    </tr>
-    <tr>
-      <td class="key"><a href="https://7education.atlassian.net/browse/TECHWIZ-2141" target="_blank">TECHWIZ-2141</a></td>
-      <td>abs-widget: show school absenteeism warning icon for matching students</td>
-      <td>Absenzen: Warnsymbol für Schulabsentismus im Widget "Absenzen meiner Lernenden"</td>
-      <td>Im Widget "Absenzen meiner Lernenden" auf der Startseite wird bei Schülerinnen und Schülern, die den definierten Schwellenwert für Schulabsentismus erreichen, neu ein Warnsymbol angezeigt. Beim Bewegen der Maus über das Symbol erscheint der Hinweis "Schulabsentismuswarnung". So erkennen Lehrpersonen auf einen Blick, bei welchen Lernenden ein auffälliges Absenzmuster vorliegt.</td>
-      <td class="estimate">1d</td>
-      <td><span class="status status-todo">In Refinement</span></td>
-    </tr>
-    <tr>
-      <td class="key"><a href="https://7education.atlassian.net/browse/TECHWIZ-2140" target="_blank">TECHWIZ-2140</a></td>
-      <td>abs-configuration: configure school absenteeism threshold</td>
-      <td>Absenzen: Schwellenwert für Schulabsentismus konfigurieren</td>
-      <td>In der Absenzkonfiguration kann neu ein Schwellenwert für Schulabsentismus definiert werden: Zeitraum in Wochen, Anzahl unabhängiger Absenzen und die dafür relevanten Absenzgründe. Eine unabhängige Absenz ist dabei eine Absenz, die nicht an aufeinanderfolgenden Tagen liegt. Mit dieser Konfiguration lassen sich wiederkehrende Absenzmuster im Widget "Absenzen meiner Lernenden" einfacher erkennen.</td>
-      <td class="estimate">1d</td>
-      <td><span class="status status-todo">In Refinement</span></td>
-    </tr>
-  </tbody>
-</table>
+<div id="content"></div>
+
+<script>
+  const ENC = {"salt":"rFivdGw6dmIzIvB6tN2Swg==","iv":"Sg7D0+kt6oI7PNhc","ciphertext":"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","iterations":250000};
+
+  const form = document.getElementById('login-form');
+  const passwordInput = document.getElementById('password-input');
+  const loginError = document.getElementById('login-error');
+  const loginScreen = document.getElementById('login-screen');
+  const content = document.getElementById('content');
+
+  function b64ToBytes(b64) {
+    return Uint8Array.from(atob(b64), c => c.charCodeAt(0));
+  }
+
+  async function tryDecrypt(password) {
+    const salt = b64ToBytes(ENC.salt);
+    const iv = b64ToBytes(ENC.iv);
+    const ciphertext = b64ToBytes(ENC.ciphertext);
+    const enc = new TextEncoder();
+
+    const baseKey = await crypto.subtle.importKey('raw', enc.encode(password), 'PBKDF2', false, ['deriveKey']);
+    const key = await crypto.subtle.deriveKey(
+      { name: 'PBKDF2', salt, iterations: ENC.iterations, hash: 'SHA-256' },
+      baseKey,
+      { name: 'AES-GCM', length: 256 },
+      false,
+      ['decrypt']
+    );
+
+    const plaintextBuffer = await crypto.subtle.decrypt({ name: 'AES-GCM', iv }, key, ciphertext);
+    return new TextDecoder().decode(plaintextBuffer);
+  }
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    loginError.style.display = 'none';
+    try {
+      const html = await tryDecrypt(passwordInput.value);
+      content.innerHTML = html;
+      loginScreen.style.display = 'none';
+      content.style.display = 'block';
+    } catch (err) {
+      loginError.style.display = 'block';
+      passwordInput.value = '';
+      passwordInput.focus();
+    }
+  });
+</script>
 
 </body>
 </html>
